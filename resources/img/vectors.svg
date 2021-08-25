@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<symbol id='leftarrow'>
+<path d="M8,0,6.57,1.394,12.15,7H0V9H12.15L6.571,14.573,8,16l8-8Z" transform="translate(16 16) rotate(180)"/>
+</symbol>
+
+<symbol id= 'rightarrow'>
+<path d="M13,5,11.57,6.394,17.15,12H5v2H17.15l-5.579,5.573L13,21l8-8Z" transform="translate(-5 -5)"/>
+</symbol>
+
+<symbol id='bottomarrow'>
+<path d="M1.25,10A8.75,8.75,0,1,0,10,1.25,8.75,8.75,0,0,0,1.25,10ZM5,9.375h7.594l-3.487-3.5L10,5l5,5-5,5-.894-.892,3.488-3.483H5Z" transform="translate(18.75 -1.25) rotate(90)"/>
+</symbol>
+
+</svg>

@@ -1,0 +1,29 @@
+.landing-header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5.5rem;
+
+  &__logo {
+    width: 12.7rem;
+    height: auto;
+  }
+  &__navbar {
+    color: $color-secondary-accent;
+    &__link {
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s;
+
+      &:hover,
+      &--active {
+        color: $color-text-light;
+      }
+      &:not(:last-of-type) {
+        margin-right: 3rem;
+      }
+    }
+  }
+}

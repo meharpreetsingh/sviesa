@@ -1,0 +1,12 @@
+.landing-header {
+  min-height: 100vh;
+  background-image: radial-gradient(
+    at top left,
+    rgba($color-secondary-accent, 1),
+    rgba($color-primary-accent, 1)
+  );
+  background-size: cover;
+  background-position: top;
+
+  padding: 8.5rem 10rem;
+}
