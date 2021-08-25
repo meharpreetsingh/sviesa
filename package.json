@@ -1,0 +1,35 @@
+{
+  "name": "sviesa",
+  "version": "1.0.0",
+  "description": "Website for SVIESA Committee in Sant Longowal Institute of Engineering and Technology",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass resources/sass/main.scss resources/css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "sass resources/sass/main.scss resources/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last versions' resources/css/style.comp.css -o resources/css/style.prefix.css",
+    "compress:css": "uglifycss resources/css/style.prefix.css > resources/css/style.css",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meharpreetsingh/sviesa.git"
+  },
+  "author": "Meharpreet Singh, SVIESA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meharpreetsingh/sviesa/issues"
+  },
+  "homepage": "https://github.com/meharpreetsingh/sviesa#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "sass": "^1.37.5",
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  }
+}
