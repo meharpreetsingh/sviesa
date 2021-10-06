@@ -12,6 +12,8 @@ body {
 }
 
 .heading-2 {
+  font-size: 3.6rem;
+  font-weight: 600;
 }
 
 .heading-3 {
@@ -20,9 +22,24 @@ body {
 }
 
 .heading-4 {
+  font-size: 2rem;
+  font-weight: 500;
 }
 
-p {
+p,
+.paragraph {
+  font-size: 1.8rem;
+  font-weight: 300;
+
+  &--light {
+    font-weight: 300;
+  }
+  &--regular {
+    font-weight: 400;
+  }
+  &--bold {
+    font-weight: 500;
+  }
 }
 
 a {

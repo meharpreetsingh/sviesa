@@ -1,67 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVIESA - The Creative Group</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SVIESA - The Creative Group</title>
+    <!-- Link Stylesheets -->
+    <link rel="stylesheet" href="resources/css/style.css" />
 
-  <!-- Link Stylesheets -->
-  <link rel="stylesheet" href="resources/css/style.css">
+    <!-- Link Vendors -->
+  </head>
 
-  <!-- Link Vendors -->
-
-</head>
-
-<body>
-  <header class="landing-header">
-    <nav class="landing-header-nav">
-      <img src="resources/img/sviesa-light.png" alt="SVIESA Logo White" class="landing-header-nav__logo">
-      <div class="landing-header-nav__navbar">
-        <a href="index.html" class="landing-header-nav__navbar__link landing-header-nav__navbar__link--active">Home</a>
-        <a href="index.html" class="landing-header-nav__navbar__link">About</a>
-        <a href="index.html" class="landing-header-nav__navbar__link">Team</a>
-        <a href="index.html" class="landing-header-nav__navbar__link">Project</a>
-        <a href="index.html" class="landing-header-nav__navbar__link">Contact</a>
+  <body>
+    <header class="landing-header">
+      <nav class="landing-header-nav">
+        <img
+          src="resources/img/sviesa-light.png"
+          alt="SVIESA Logo White"
+          class="landing-header-nav__logo"
+        />
+        <div class="landing-header-nav__navbar">
+          <a
+            href="index.html"
+            class="landing-header-nav__navbar__link landing-header-nav__navbar__link--active"
+            >Home</a
+          >
+          <a href="index.html" class="landing-header-nav__navbar__link">About</a>
+          <a href="index.html" class="landing-header-nav__navbar__link">Team</a>
+          <a href="index.html" class="landing-header-nav__navbar__link">Project</a>
+          <a href="index.html" class="landing-header-nav__navbar__link">Contact</a>
+        </div>
+      </nav>
+      <div class="player">
+        <div class="player__content">
+          <div class="player__content__text">
+            <h1 class="heading-1">SVIESA</h1>
+            <h3 class="heading-3">
+              A group of creative people having a fire within themselves to improve self and each
+              other.
+            </h3>
+          </div>
+          <div class="player__content__visual">
+            <img
+              src="resources/img/player-photo.jpg"
+              alt="photo-1"
+              class="player__content__visual--1"
+            />
+          </div>
+        </div>
+        <div class="player__controls">
+          <div class="player__controls-wrapper">
+            <button class="player__controls__btn--previous">
+              <svg alt="left arrow">
+                <use xlink:href="resources/img/vectors.svg#leftarrow"></use>
+              </svg>
+            </button>
+            <div class="player__controls__player-info">01 - 06</div>
+            <button class="player__controls__btn--next">
+              <svg alt="right arrow">
+                <use xlink:href="resources/img/vectors.svg#rightarrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="scroll-down">
+            Scroll Down
+            <svg alt="bottom arrow">
+              <use xlink:href="resources/img/vectors.svg#bottomarrow"></use>
+            </svg>
+          </div>
+        </div>
       </div>
+    </header>
+    <nav class="navigation-bar">
+      <div class="navigation-bar__logo">
+        <img src="resources/img/sviesa-light.png" alt="Sviesa Logo" />
+      </div>
+      <div class="navigation-bar__nav">
+        <a href="" class="navigation-bar__nav__link navigation-bar__nav__link--active">Home</a>
+        <a href="" class="navigation-bar__nav__link">About</a>
+        <a href="" class="navigation-bar__nav__link">Team</a>
+        <a href="" class="navigation-bar__nav__link">Project</a>
+        <a href="" class="navigation-bar__nav__link">Contact</a>
+      </div>
+      <a href="#" class="navigation-bar__cta btn btn--filled">Collaborate</a>
     </nav>
-    <div class="player">
-      <div class="player__content">
-        <div class="player__content__text">
-          <h1 class="heading-1">SVIESA</h1>
-          <h3 class="heading-3">A group of creative people having a fire within themselves to improve self and
-            each other.</h3>
-        </div>
-        <div class="player__content__visual">
-          <img src="resources/img/player-photo.jpg" alt="photo-1" class="player__content__visual--1">
-          <img src="resources/img/player-photo.jpg" alt="photo-2" class="player__content__visual--2">
-          <img src="resources/img/player-photo.jpg" alt="photo-3" class="player__content__visual--3">
-        </div>
-      </div>
-      <div class="player__controls">
-        <div class="player__controls-wrapper">
-          <button class="player__controls__btn--previous">
-            <svg alt="left arrow">
-              <use xlink:href="resources/img/vectors.svg#leftarrow"></use>
+    <main>
+      <section class="what-we-do">
+        <div class="section-heading-container">
+          <h2 class="heading-2">What we do? - Featured Projects</h2>
+          <a href="#" class="section-link">
+            All Projects
+            <svg alt="bottom arrow">
+              <use xlink:href="resources/img/vectors.svg#bottomarrow"></use>
             </svg>
-          </button>
-          <div class="player__controls__player-info">01 - 06</div>
-          <button class="player__controls__btn--next">
-            <svg alt="right arrow">
-              <use xlink:href="resources/img/vectors.svg#rightarrow"></use>
+          </a>
+        </div>
+        <div class="photo-text-composition">
+          <div class="photo-text-composition__text photo-text-composition__text--right">
+            <h3 class="heading-3">Podcast</h3>
+            <p class="paragraph--regular">We live in your lives through our sound.</p>
+            <p class="paragraph--light">
+              Sviesa podcast is a monthly broadcast of stories of SLIET , named as Sviesa and Chill
+              Podcast. It covers various stories related to life of students in SLIET
+            </p>
+            <div class="photo-text-composition__text__link">
+              <a href="#">Know more »</a>
+            </div>
+          </div>
+          <div class="photo-text-composition__photo">
+            <img src="resources/img/bg.png" alt="Headphone" />
+          </div>
+        </div>
+        <div class="photo-text-composition photo-text-composition--reverse">
+          <div class="photo-text-composition__text photo-text-composition--reverse__text">
+            <h3 class="heading-3">Photography</h3>
+            <p class="paragraph--regular">We live in your lives through our sound.</p>
+            <p class="paragraph--light">
+              Sviesa podcast is a monthly broadcast of stories of SLIET , named as Sviesa and Chill
+              Podcast. It covers various stories related to life of students in SLIET
+            </p>
+            <div class="photo-text-composition__text__link">
+              <a href="#">Know more »</a>
+            </div>
+          </div>
+          <div class="photo-text-composition__photo">
+            <img src="resources/img/bg-2.png" alt="Headphone" />
+          </div>
+        </div>
+        <div class="photo-text-composition">
+          <div class="photo-text-composition__text photo-text-composition__text--right">
+            <h3 class="heading-3">Videography</h3>
+            <p class="paragraph--regular">We live in your lives through our sound.</p>
+            <p class="paragraph--light">
+              Sviesa podcast is a monthly broadcast of stories of SLIET , named as Sviesa and Chill
+              Podcast. It covers various stories related to life of students in SLIET
+            </p>
+            <div class="photo-text-composition__text__link">
+              <a href="#">Know more »</a>
+            </div>
+          </div>
+          <div class="photo-text-composition__photo">
+            <img src="resources/img/bg-3.png" alt="Headphone" />
+          </div>
+        </div>
+        <div class="photo-text-composition photo-text-composition--reverse">
+          <div class="photo-text-composition__text photo-text-composition--reverse__text">
+            <h3 class="heading-3">Graphic Designing</h3>
+            <p class="paragraph--regular">We live in your lives through our sound.</p>
+            <p class="paragraph--light">
+              Sviesa podcast is a monthly broadcast of stories of SLIET , named as Sviesa and Chill
+              Podcast. It covers various stories related to life of students in SLIET
+            </p>
+            <div class="photo-text-composition__text__link">
+              <a href="#">Know more »</a>
+            </div>
+          </div>
+          <div class="photo-text-composition__photo">
+            <img src="resources/img/bg-4.png" alt="Headphone" />
+          </div>
+        </div>
+        <div class="photo-text-composition">
+          <div class="photo-text-composition__text photo-text-composition__text--right">
+            <h3 class="heading-3">Content Writing</h3>
+            <p class="paragraph--regular">We live in your lives through our sound.</p>
+            <p class="paragraph--light">
+              Sviesa podcast is a monthly broadcast of stories of SLIET , named as Sviesa and Chill
+              Podcast. It covers various stories related to life of students in SLIET
+            </p>
+            <div class="photo-text-composition__text__link">
+              <a href="#">Know more »</a>
+            </div>
+          </div>
+          <div class="photo-text-composition__photo">
+            <img src="resources/img/bg-5.png" alt="Headphone" />
+          </div>
+        </div>
+      </section>
+      <section class="section-about-us-brief">
+        <div class="section-heading-container">
+          <h2 class="heading-2">About us</h2>
+          <a href="#" class="section-link">
+            More info
+            <svg alt="bottom arrow">
+              <use xlink:href="resources/img/vectors.svg#bottomarrow"></use>
             </svg>
-          </button>
+          </a>
         </div>
-        <div class="scroll-down">
-          Scroll Down
-          <svg alt="bottom arrow">
-            <use xlink:href="resources/img/vectors.svg#bottomarrow"></use>
-          </svg>
+        <div class="photo-text-composition">
+          <div class="photo-text-composition__text photo-text-composition__text--left">
+            <h3 class="heading-3">SVIESA - The PMC SLIET</h3>
+            <p class="paragraph--light">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+              accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur.
+            </p>
+          </div>
+          <div class="photo-text-composition__photo">
+            <img src="resources/img/sviesa-team.png" alt="Headphone" />
+          </div>
         </div>
-      </div>
-    </div>
-  </header>
-</body>
-
+      </section>
+    </main>
+  </body>
 </html>
