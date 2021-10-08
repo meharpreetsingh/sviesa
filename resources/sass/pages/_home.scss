@@ -17,6 +17,7 @@
   margin-bottom: 6rem;
   @include respond(phone-big) {
     margin-bottom: 3rem;
+    flex-direction: column;
   }
 
   & a {
