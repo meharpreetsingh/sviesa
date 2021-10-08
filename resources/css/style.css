@@ -160,6 +160,7 @@ a {
 .navigation-bar__nav__link:hover, .navigation-bar__nav__link--active {
   color: #ee0000;
 }
+
 .player {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -335,7 +336,7 @@ a {
 }
 @media only screen and (max-width: 56.25em) {
   .photo-text-composition {
-    grid-gap: 3rem;
+    grid-gap: 6rem;
   }
 }
 @media only screen and (max-width: 43.75em) {
@@ -417,6 +418,10 @@ a {
 @media only screen and (max-width: 43.75em) {
   .footer {
     padding: 1.5rem 3rem;
+    flex-direction: column;
+  }
+  .footer > * {
+    margin-bottom: 1rem;
   }
 }
 .footer__social-media-links {
