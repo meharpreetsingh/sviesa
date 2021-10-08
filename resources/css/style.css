@@ -26,6 +26,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -124,6 +134,11 @@ a {
   justify-content: space-between;
   color: #ffffff;
 }
+@media only screen and (max-width: 75em) {
+  .navigation-bar {
+    padding: 1.3rem 6rem;
+  }
+}
 .navigation-bar__logo {
   width: 10rem;
 }
@@ -134,7 +149,6 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 0.8rem 1.6rem;
   margin: 0 1rem;
   transition: all 0.3s;
 }
@@ -333,6 +347,53 @@ a {
   text-align: left;
 }
 
+.footer {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 3rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.5px solid rgba(240, 240, 240, 0.5);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+@media only screen and (max-width: 75em) {
+  .footer {
+    padding: 2rem 6rem;
+  }
+}
+.footer__social-media-links {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, auto);
+}
+.footer__social-media-links a {
+  transition: all 0.3s;
+}
+.footer__social-media-links a:hover {
+  color: #ee0000;
+}
+.footer__social-media-links a svg {
+  height: 3rem;
+  width: 3rem;
+  fill: currentColor;
+}
+.footer__back-to-top {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+.footer__back-to-top svg {
+  margin-left: 1rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  transform: scale(1.15) rotate(180deg);
+  fill: currentColor;
+}
+.footer__back-to-top:hover {
+  color: #ee0000;
+}
+
 .landing-header {
   min-height: 100vh;
   background-image: radial-gradient(at top left, #ee0000, #111111);
@@ -351,6 +412,12 @@ a {
 .what-we-do,
 .section-about-us-brief {
   padding: 15rem 10rem;
+}
+@media only screen and (max-width: 75em) {
+  .what-we-do,
+.section-about-us-brief {
+    padding: 8rem 6rem;
+  }
 }
 
 .section-heading-container {

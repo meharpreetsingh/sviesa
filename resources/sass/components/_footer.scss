@@ -1,0 +1,49 @@
+.footer {
+  background-color: $color-primary-accent;
+  color: $color-white;
+  padding: 3rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.5px solid rgba($color: #f0f0f0, $alpha: 0.5);
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  @include respond(tab-land) {
+    padding: 2rem 6rem;
+  }
+
+  &__copyright {
+  }
+  &__social-media-links {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(5, auto);
+
+    a {
+      transition: all 0.3s;
+      &:hover {
+        color: $color-secondary-accent;
+      }
+      svg {
+        height: 3rem;
+        width: 3rem;
+        fill: currentColor;
+      }
+    }
+  }
+  &__back-to-top {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    svg {
+      margin-left: 1rem;
+      height: 1.75rem;
+      width: 1.75rem;
+      transform: scale(1.15) rotate(180deg);
+      fill: currentColor;
+    }
+    &:hover {
+      color: $color-secondary-accent;
+    }
+  }
+}

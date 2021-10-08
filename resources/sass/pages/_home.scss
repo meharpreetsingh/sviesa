@@ -2,6 +2,10 @@
 .what-we-do,
 .section-about-us-brief {
   padding: 15rem 10rem;
+
+  @include respond(tab-land) {
+    padding: 8rem 6rem;
+  }
 }
 .section-heading-container {
   display: flex;
