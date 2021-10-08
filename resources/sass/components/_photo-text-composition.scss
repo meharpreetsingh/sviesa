@@ -6,6 +6,9 @@
   &:not(:last-of-type) {
     margin-bottom: 6rem;
   }
+  @include respond(tab-port) {
+    grid-gap: 3rem;
+  }
   @include respond(phone-big) {
     grid-gap: 2rem;
     grid-template-columns: auto;
