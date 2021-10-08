@@ -6,6 +6,11 @@
   &:not(:last-of-type) {
     margin-bottom: 6rem;
   }
+  @include respond(phone-big) {
+    grid-gap: 2rem;
+    grid-template-columns: auto;
+    grid-template-areas: 'photo' 'text';
+  }
 
   &__text {
     text-align: right;
@@ -19,6 +24,9 @@
     }
     &--right {
       text-align: right;
+      @include respond(phone-big) {
+        text-align: left;
+      }
     }
 
     &__link {
@@ -48,6 +56,10 @@
 
   &--reverse {
     grid-template-areas: 'photo text';
+    @include respond(phone-big) {
+      grid-template-columns: auto;
+      grid-template-areas: 'photo' 'text';
+    }
     &__text {
       text-align: left;
     }

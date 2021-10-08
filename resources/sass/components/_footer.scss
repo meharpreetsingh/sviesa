@@ -4,12 +4,16 @@
   padding: 3rem 10rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-top: 0.5px solid rgba($color: #f0f0f0, $alpha: 0.5);
   font-size: 1.8rem;
   font-weight: 400;
 
   @include respond(tab-land) {
     padding: 2rem 6rem;
+  }
+  @include respond(phone-big) {
+    padding: 1.5rem 3rem;
   }
 
   &__copyright {

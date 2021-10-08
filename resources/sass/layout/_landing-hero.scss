@@ -9,4 +9,10 @@
   background-position: top;
 
   padding: 8.5rem 10rem;
+  @include respond(tab-land) {
+    padding: 6rem 6rem;
+  }
+  @include respond(phone-big) {
+    padding: 5rem 3rem;
+  }
 }

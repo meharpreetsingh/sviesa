@@ -10,6 +10,9 @@
   @include respond(tab-land) {
     padding: 1.3rem 6rem;
   }
+  @include respond(phone-big) {
+    padding: 1rem 3rem;
+  }
 
   &__logo {
     width: 10rem;
