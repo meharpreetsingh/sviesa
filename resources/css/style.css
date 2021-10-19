@@ -112,6 +112,11 @@ a {
 .landing-header-nav__navbar {
   color: #ee0000;
 }
+@media only screen and (max-width: 43.75em) {
+  .landing-header-nav__navbar {
+    display: none;
+  }
+}
 .landing-header-nav__navbar__link {
   font-size: 1.8rem;
   font-weight: 600;
@@ -141,14 +146,25 @@ a {
 }
 @media only screen and (max-width: 43.75em) {
   .navigation-bar {
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
+    grid-gap: 2rem;
+    flex-direction: column;
   }
 }
 .navigation-bar__logo {
   width: 10rem;
+  grid-area: "logo";
 }
 .navigation-bar__logo img {
   width: 100%;
+}
+@media only screen and (max-width: 43.75em) {
+  .navigation-bar__nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-gap: 1rem;
+  }
 }
 .navigation-bar__nav__link {
   font-size: 1.8rem;
@@ -159,6 +175,9 @@ a {
 }
 .navigation-bar__nav__link:hover, .navigation-bar__nav__link--active {
   color: #ee0000;
+}
+.navigation-bar__cta {
+  grid-area: cta;
 }
 
 .player {
@@ -456,6 +475,68 @@ a {
 }
 .footer__back-to-top:hover {
   color: #ee0000;
+}
+
+.secondary-page-header {
+  padding: 10rem 10rem;
+  background-image: radial-gradient(at top left, #ee0000, #000000);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1rem;
+  text-transform: uppercase;
+}
+.secondary-page-header__page-info {
+  font-size: 2rem;
+}
+
+.member-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+}
+.member-container__member-card {
+  position: relative;
+}
+.member-container__member-card__img {
+  width: 100%;
+}
+.member-container__member-card__name-card {
+  position: absolute;
+  color: #ffffff;
+  bottom: 2rem;
+  left: 0;
+  padding: 1rem 2rem;
+  min-width: 60%;
+  background-color: #ee0000;
+  transition: all 0.3s;
+}
+.member-container__member-card__name-card__name {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.member-container__member-card__name-card__post {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.member-container__member-card__name-card:hover {
+  background-color: #cc0001;
+}
+
+section {
+  padding: 15rem 10rem;
+}
+@media only screen and (max-width: 75em) {
+  section {
+    padding: 8rem 6rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  section {
+    padding: 5rem 3rem;
+  }
 }
 
 .landing-header {

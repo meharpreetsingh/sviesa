@@ -11,6 +11,11 @@
   }
   &__navbar {
     color: $color-secondary-accent;
+
+    @include respond(phone-big) {
+      display: none;
+    }
+
     &__link {
       font-size: 1.8rem;
       font-weight: 600;

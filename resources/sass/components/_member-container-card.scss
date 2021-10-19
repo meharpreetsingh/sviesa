@@ -1,0 +1,32 @@
+.member-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+  &__member-card {
+    position: relative;
+    &__img {
+      width: 100%;
+    }
+    &__name-card {
+      position: absolute;
+      color: $color-white;
+      bottom: 2rem;
+      left: 0;
+      padding: 1rem 2rem;
+      min-width: 60%;
+      background-color: $color-secondary-accent;
+      transition: all 0.3s;
+      &__name {
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+      &__post {
+        font-size: 1.1rem;
+        font-weight: 400;
+      }
+      &:hover {
+        background-color: $color-secondary-accent-hover;
+      }
+    }
+  }
+}
