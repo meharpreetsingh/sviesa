@@ -1,0 +1,14 @@
+.queans-container {
+  &__queans {
+    margin-bottom: 3rem;
+    &__que {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    &__ans {
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+  }
+}

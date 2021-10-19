@@ -98,6 +98,10 @@ a {
   text-decoration: none;
 }
 
+.display-none {
+  display: none;
+}
+
 .landing-header-nav {
   display: flex;
   flex-direction: row;
@@ -498,6 +502,9 @@ a {
     padding: 5rem 3rem;
   }
 }
+.secondary-page-header__heading {
+  position: initial;
+}
 .secondary-page-header__page-info {
   font-size: 2rem;
 }
@@ -533,6 +540,19 @@ a {
 }
 .member-container__member-card__name-card:hover {
   background-color: #cc0001;
+}
+
+.queans-container__queans {
+  margin-bottom: 3rem;
+}
+.queans-container__queans__que {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.queans-container__queans__ans {
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 
 section {
@@ -624,6 +644,11 @@ section {
 .section-about-us-brief {
   background-color: #111111;
   color: #ffffff;
+}
+
+.about__faq {
+  background-color: #111111;
+  color: #fefefe;
 }
 
 /*# sourceMappingURL=style.css.map */
