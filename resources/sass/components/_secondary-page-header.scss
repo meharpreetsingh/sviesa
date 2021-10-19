@@ -9,6 +9,13 @@
   grid-gap: 1rem;
   text-transform: uppercase;
 
+  @include respond(tab-land) {
+    padding: 8rem 6rem;
+  }
+  @include respond(phone-big) {
+    padding: 5rem 3rem;
+  }
+
   &__heading {
   }
   &__page-info {
