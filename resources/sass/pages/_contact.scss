@@ -1,0 +1,15 @@
+.contact {
+  &__get-in-touch {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 6rem;
+    @include respond(phone-big) {
+      // width < 1200?
+      grid-template-columns: none;
+    }
+    &__text {
+    }
+    &__social-icons {
+    }
+  }
+}

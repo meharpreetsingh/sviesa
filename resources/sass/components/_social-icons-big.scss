@@ -1,0 +1,22 @@
+.social-icons-big-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1rem;
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-secondary-accent;
+    transition: all 0.3s;
+    padding: 3rem;
+    &:hover {
+      background-color: $color-secondary-accent-hover;
+    }
+    svg {
+      height: 8rem;
+      width: 8rem;
+      object-fit: contain;
+      fill: $color-text-light;
+    }
+  }
+}
