@@ -118,6 +118,14 @@ a {
   margin-bottom: 4rem;
 }
 
+.bg-primary {
+  background-color: #111111;
+}
+
+.bg-secondary {
+  background-color: #ee0000;
+}
+
 .landing-header-nav {
   display: flex;
   flex-direction: row;
@@ -592,6 +600,21 @@ a {
   width: 8rem;
   object-fit: contain;
   fill: #fefefe;
+}
+
+.sponsorship-images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: center;
+  grid-gap: 4rem;
+}
+.sponsorship-images-container__sponsorship-image {
+  max-height: 15rem;
+}
+.sponsorship-images-container__sponsorship-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 section {
