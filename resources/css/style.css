@@ -618,6 +618,116 @@ a {
   object-fit: contain;
 }
 
+.team__popup {
+  position: relative;
+  background-color: aliceblue;
+  width: 80%;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 38rem 1fr;
+}
+.team__popup__close {
+  position: absolute;
+  z-index: 100;
+  color: white;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  user-select: none;
+  cursor: pointer;
+}
+.team__popup__close:hover {
+  text-decoration: underline;
+}
+.team__popup__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.team__popup__header {
+  background-color: #ee0000;
+  display: grid;
+  grid-template-columns: 36.7rem 1fr;
+}
+.team__popup__header__img {
+  overflow: hidden;
+}
+.team__popup__header__img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+}
+.team__popup__header__text {
+  padding: 8rem;
+  color: #ffffff;
+}
+.team__popup__header__text__name {
+  font-size: 4.8rem;
+  font-weight: 500;
+}
+.team__popup__header__text__skills__heading {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+.team__popup__header__text__skills__item {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.team__popup__body {
+  padding: 3rem 10rem 6rem 10rem;
+  display: grid;
+  grid-template-columns: 69.5rem 1fr;
+}
+.team__popup__body__summary__heading {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.team__popup__body__summary__paragraph p:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+.team__popup__body__social {
+  text-align: right;
+}
+.team__popup__body__social__heading {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.team__popup__body__social__links {
+  font-size: 1.6rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0.5rem;
+}
+.team__popup__body__social__links svg {
+  height: 2.7rem;
+  width: 2.7rem;
+  fill: currentColor;
+  object-fit: cover;
+}
+.team__popup__body__social__links > * {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-gap: 1rem;
+  transition: all 0.4s;
+}
+.team__popup__body__social__links > *:hover {
+  color: #ee0000;
+  fill: #ee0000;
+}
 section {
   padding: 15rem 10rem;
 }

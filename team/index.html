@@ -30,6 +30,75 @@
         <div class="secondary-page-header__page-info paragraph--bold">Our Creatives</div>
       </div>
     </header>
+    <div class="team__popup__container">
+      <div class="team__popup">
+        <div class="team__popup__close">Close X</div>
+        <div class="team__popup__header">
+          <div class="team__popup__header__img">
+            <img src="/resources/img/team/mr-meharpreet-singh.jpg" alt="Meharpreet Singh" />
+          </div>
+          <div class="team__popup__header__text">
+            <div class="team__popup__header__text__name">Meharpreet Singh</div>
+            <div class="team__popup__header__text__skills">
+              <div class="team__popup__header__text__skills__heading">Skills</div>
+              <div class="team__popup__header__text__skills__item">Graphic Designing</div>
+              <div class="team__popup__header__text__skills__item">Web Development</div>
+              <div class="team__popup__header__text__skills__item">Motion Graphics</div>
+              <div class="team__popup__header__text__skills__item">
+                User Interface & Experience Designer
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team__popup__body">
+          <div class="team__popup__body__summary">
+            <div class="team__popup__body__summary__heading">Summary</div>
+            <div class="team__popup__body__summary__paragraph">
+              <p>
+                I am a skilled freelance designer with over three years of experience in the field!
+                Providing services up-to-date on new techniques and procedures related to
+                requirements.
+              </p>
+              <p>
+                Excels at web platform development, desktop publishing, computer-aided designs, and
+                video editing & creation and latest editing software programs. I have managed
+                multiple projects at the same time. With excellent communication, I am able to work
+                as part of a team or as the sole designer.
+              </p>
+            </div>
+          </div>
+          <div class="team__popup__body__social">
+            <div class="team__popup__body__social__heading">Contact</div>
+            <div class="team__popup__body__social__links">
+              <a href="" class="team__popup__body__social__links__linkedin">
+                meharpreet-singh
+                <svg alt="linkedin-icon">
+                  <use xlink:href="/resources/img/vectors.svg#linkedin-icon"></use>
+                </svg>
+              </a>
+              <a href="" class="team__popup__body__social__links__instagram">
+                mehar.sidhu.07
+                <svg alt="instagram-icon">
+                  <use xlink:href="/resources/img/vectors.svg#instagram-icon"></use>
+                </svg>
+              </a>
+              <a href="" class="team__popup__body__social__links__facebook">
+                mehar.sidhu.01
+                <svg alt="facebook-icon">
+                  <use xlink:href="/resources/img/vectors.svg#facebook-icon"></use>
+                </svg>
+              </a>
+              <a href="" class="team__popup__body__social__links__whatsapp">
+                +91 83603 50054
+                <svg alt="whatsapp-icon">
+                  <use xlink:href="/resources/img/vectors.svg#whatsapp-icon"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <main>
       <section class="member-container">
         <div class="member-container__member-card">
@@ -136,5 +205,61 @@
         </svg>
       </a>
     </footer>
+    <!-- JavaScript -->
+    <script src="..\resources\scripts\script.js"></script>
+    <script>
+      let teamMembers = [
+        {
+          name: 'Meharpreet Singh',
+          post: 'Member',
+          skills: [
+            'Graphic Designing',
+            'Web Development',
+            'Motion Graphics',
+            'User Interface & Experience Designer',
+          ],
+          summary: [
+            'I am a skilled freelance designer with over three years of experience in the field! Providing services up-to-date on new techniques and procedures related to requirements.',
+            'Excels at web platform development, desktop publishing, computer-aided designs, and video editing & creation and latest editing software programs. I have managed multiple projects at the same time. With excellent communication, I am able to work as part of a team or as the sole designer.',
+          ],
+          linkedin: 'meharpreet-singh',
+          instagram: 'mehar.sidhu.07',
+          facebook: 'mehar.sidhu.01',
+          whatsapp: '+91 83603 50054',
+          photoname: 'mr-meharpreet-singh.jpg',
+        },
+        {
+          name: 'Harikrishan Prajapati',
+          post: 'Member',
+          skills: ['Business Management', 'UI & UX'],
+          summary: [
+            'I am a skilled freelance designer with over three years of experience in the field! Providing services up-to-date on new techniques and procedures related to requirements.',
+          ],
+          linkedin: 'harikrishan-singh',
+          instagram: 'harikrishan.sidhu.07',
+          facebook: 'harikrishan.sidhu.01',
+          whatsapp: '+91 83603 50054',
+          photoname: 'mr-meharpreet-singh-1.jpg',
+        },
+      ];
+      const teamPopup = document.querySelector('.team__popup');
+      const teamPopupContainer = document.querySelector('.team__popup__container');
+      const teamMemberName = document.querySelector('.team__popup__header__text__name');
+      const teamMemberSkills = document.querySelector('.team__popup__header__text__skills');
+      const teamMemberSummary = document.querySelector('.team__popup__body__summary__paragraph');
+      const teamMemberLinkedin = document.querySelector(
+        '.team__popup__body__social__links__linkedin'
+      );
+      const teamMemberInstagram = document.querySelector(
+        '.team__popup__body__social__links__instagram'
+      );
+      const teamMemberFacebook = document.querySelector(
+        '.team__popup__body__social__links__facebook'
+      );
+      const teamMemberWhatsApp = document.querySelector(
+        '.team__popup__body__social__links__whatsapp'
+      );
+      const memberContainer = document.querySelector('.member-container');
+    </script>
   </body>
 </html>

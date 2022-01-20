@@ -1,38 +1,37 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
 
-@import "components/landing-header-nav";
-@import "components/navigation-bar";
-@import "components/hero-player";
-@import "components/button";
-@import "components/card";
-@import "components/composition";
-@import "components/feature-box";
-@import "components/form";
-@import "components/photo-text-composition";
-@import "components/footer";
-@import "components/secondary-page-header";
-@import "components/member-container-card";
-@import "components/queans-container";
-@import "components/social-icons-big";
-@import "components/sponsorship-images-container";
+@import 'components/landing-header-nav';
+@import 'components/navigation-bar';
+@import 'components/hero-player';
+@import 'components/button';
+@import 'components/card';
+@import 'components/composition';
+@import 'components/feature-box';
+@import 'components/form';
+@import 'components/photo-text-composition';
+@import 'components/footer';
+@import 'components/secondary-page-header';
+@import 'components/member-container-card';
+@import 'components/queans-container';
+@import 'components/social-icons-big';
+@import 'components/sponsorship-images-container';
+@import 'components/popup';
 
-@import "layout/basic";
-@import "layout/landing-hero";
-@import "layout/footer";
-@import "layout/header";
-@import "layout/navigation";
+@import 'layout/basic';
+@import 'layout/landing-hero';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/navigation';
 
-
-@import "pages/home";
-@import "pages/team";
-@import "pages/about";
-@import "pages/project";
-@import "pages/contact";
-
+@import 'pages/home';
+@import 'pages/team';
+@import 'pages/about';
+@import 'pages/project';
+@import 'pages/contact';

@@ -52,3 +52,6 @@ const landingPageHeaderContent = [
 console.log(landingPageHeaderContent[landingPageContantNum].heading);
 function changeLeft() {}
 playerControlsLeft.addEventListener('click');
+
+// Teams Page
+const memberContainer = document.querySelector('.member-container');
