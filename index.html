@@ -63,16 +63,16 @@
               </svg>
             </button>
           </div>
-          <div id="scroll-to-main" class="scroll-down">
+          <a href="#nav" id="scroll-to-main" class="scroll-down">
             Scroll Down
             <svg alt="bottom arrow">
               <use xlink:href="resources/img/vectors.svg#bottomarrow"></use>
             </svg>
-          </div>
+          </a>
         </div>
       </div>
     </header>
-    <nav class="navigation-bar">
+    <nav id="nav" class="navigation-bar">
       <div class="navigation-bar__logo">
         <img src="resources/img/sviesa-light.png" alt="Sviesa Logo" />
       </div>
@@ -85,7 +85,7 @@
       </div>
       <a href="#" class="navigation-bar__cta btn btn--filled">Collaborate</a>
     </nav>
-    <main>
+    <main id="main">
       <section class="what-we-do">
         <div class="section-heading-container">
           <h2 class="heading-2">What we do? - Featured Projects</h2>
@@ -250,5 +250,87 @@
     </footer>
     <!-- Scripts -->
     <script src="../resources/scripts/script.js"></script>
+    <script>
+      // Landing Page Header
+      let landingPageContentNum = 0;
+      const playerContentHeadingOne = document.querySelector('.player__content__text .heading-1');
+
+      const playerContentHeadingThree = document.querySelector('.player__content__text .heading-3');
+      const playerContentVisual = document.querySelector('.player__content__visual img');
+
+      const playerControlsLeft = document.querySelector(
+        '.player__controls .player__controls__btn--previous'
+      );
+      const playerControlsRight = document.querySelector(
+        '.player__controls .player__controls__btn--next'
+      );
+      const playerControlsPlayerInfo = document.querySelector('.player__controls__player-info');
+      const landingPageHeaderContent = [
+        {
+          heading: 'SVIESA - The PMC Sliet',
+          paragraph: `A group of creative people having a fire within themselves to improve self and each
+              other.`,
+          imageName: 'creative.jpg',
+        },
+        {
+          heading: 'SVIESA - Photography',
+          paragraph: `Sviesa's main goal is to create memories by capturing the most breathtaking moments of one's life.`,
+          imageName: 'photography.jpg',
+        },
+        {
+          heading: 'SVIESA - Videography',
+          paragraph: `Sviesa is known for creating videos to promote the activities of SLIET Longowal, be it within the institute or all over the country.`,
+          imageName: 'videography.jpg',
+        },
+        {
+          heading: 'SVIESA - Graphic Design',
+          paragraph: `On every occasion, Sviesa creates a wide variety of digital art to express themselves and celebrate the uniqueness of creativity of the members.`,
+          imageName: 'graphic-design.jpg',
+        },
+        {
+          heading: 'SVIESA - Podcasts',
+          paragraph: `Sviesa podcast is a monthly broadcast of stories of SLIET , named as Sviesa and Chill Podcast.`,
+          imageName: 'podcast.jpg',
+        },
+        {
+          heading: 'SVIESA - Content Writing',
+          paragraph: `We write the present and the future for you.`,
+          imageName: 'content-writing.jpg',
+        },
+      ];
+      const nextSlide = () => {
+        if (landingPageContentNum == landingPageHeaderContent.length - 1) {
+          landingPageContentNum = 0;
+        } else {
+          landingPageContentNum += 1;
+        }
+        playerContentHeadingOne.innerHTML = `${landingPageHeaderContent[landingPageContentNum].heading}`;
+        playerContentHeadingThree.innerHTML = `${landingPageHeaderContent[landingPageContentNum].paragraph}`;
+        const imageUrl = `resources/img/${landingPageHeaderContent[landingPageContentNum].imageName}`;
+        playerContentVisual.setAttribute('src', imageUrl);
+      };
+      const previousSlide = () => {
+        if (landingPageContentNum == 0) {
+          landingPageContentNum = landingPageHeaderContent.length - 1;
+        } else {
+          landingPageContentNum -= 1;
+        }
+        playerContentHeadingOne.innerHTML = `${landingPageHeaderContent[landingPageContentNum].heading}`;
+        playerContentHeadingThree.innerHTML = `${landingPageHeaderContent[landingPageContentNum].paragraph}`;
+        const imageUrl = `resources/img/${landingPageHeaderContent[landingPageContentNum].imageName}`;
+        playerContentVisual.setAttribute('src', imageUrl);
+      };
+      const setSlide = (num) => {
+        playerContentHeadingOne.innerHTML = `${landingPageHeaderContent[num].heading}`;
+        playerContentHeadingThree.innerHTML = `${landingPageHeaderContent[num].paragraph}`;
+        const imageUrl = `resources/img/${landingPageHeaderContent[num].imageName}`;
+        playerContentVisual.setAttribute('src', imageUrl);
+        landingPageContentNum = num;
+      };
+      setSlide(0);
+      playerControlsRight.addEventListener('click', nextSlide);
+      playerControlsLeft.addEventListener('click', previousSlide);
+      setInterval(nextSlide, 7000);
+    </script>
   </body>
 </html>

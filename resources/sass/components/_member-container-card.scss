@@ -6,6 +6,9 @@
     position: relative;
     &__img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
     }
     &__name-card {
       position: absolute;

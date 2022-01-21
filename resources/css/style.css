@@ -544,6 +544,9 @@ a {
 }
 .member-container__member-card__img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 .member-container__member-card__name-card {
   position: absolute;

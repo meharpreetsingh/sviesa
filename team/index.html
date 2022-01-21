@@ -71,25 +71,26 @@
             <div class="team__popup__body__social__heading">Contact</div>
             <div class="team__popup__body__social__links">
               <a href="" class="team__popup__body__social__links__linkedin">
-                meharpreet-singh
+                <p>meharpreet-singh</p>
                 <svg alt="linkedin-icon">
                   <use xlink:href="/resources/img/vectors.svg#linkedin-icon"></use>
                 </svg>
               </a>
               <a href="" class="team__popup__body__social__links__instagram">
-                mehar.sidhu.07
+                <p>mehar.sidhu.07</p>
                 <svg alt="instagram-icon">
                   <use xlink:href="/resources/img/vectors.svg#instagram-icon"></use>
                 </svg>
               </a>
               <a href="" class="team__popup__body__social__links__facebook">
-                mehar.sidhu.01
+                <p>mehar.sidhu.01</p>
                 <svg alt="facebook-icon">
                   <use xlink:href="/resources/img/vectors.svg#facebook-icon"></use>
                 </svg>
               </a>
+
               <a href="" class="team__popup__body__social__links__whatsapp">
-                +91 83603 50054
+                <p>+91 83603 50054</p>
                 <svg alt="whatsapp-icon">
                   <use xlink:href="/resources/img/vectors.svg#whatsapp-icon"></use>
                 </svg>
@@ -208,43 +209,10 @@
     <!-- JavaScript -->
     <script src="..\resources\scripts\script.js"></script>
     <script>
-      let teamMembers = [
-        {
-          name: 'Meharpreet Singh',
-          post: 'Member',
-          skills: [
-            'Graphic Designing',
-            'Web Development',
-            'Motion Graphics',
-            'User Interface & Experience Designer',
-          ],
-          summary: [
-            'I am a skilled freelance designer with over three years of experience in the field! Providing services up-to-date on new techniques and procedures related to requirements.',
-            'Excels at web platform development, desktop publishing, computer-aided designs, and video editing & creation and latest editing software programs. I have managed multiple projects at the same time. With excellent communication, I am able to work as part of a team or as the sole designer.',
-          ],
-          linkedin: 'meharpreet-singh',
-          instagram: 'mehar.sidhu.07',
-          facebook: 'mehar.sidhu.01',
-          whatsapp: '+91 83603 50054',
-          photoname: 'mr-meharpreet-singh.jpg',
-        },
-        {
-          name: 'Harikrishan Prajapati',
-          post: 'Member',
-          skills: ['Business Management', 'UI & UX'],
-          summary: [
-            'I am a skilled freelance designer with over three years of experience in the field! Providing services up-to-date on new techniques and procedures related to requirements.',
-          ],
-          linkedin: 'harikrishan-singh',
-          instagram: 'harikrishan.sidhu.07',
-          facebook: 'harikrishan.sidhu.01',
-          whatsapp: '+91 83603 50054',
-          photoname: 'mr-meharpreet-singh-1.jpg',
-        },
-      ];
       const teamPopup = document.querySelector('.team__popup');
       const teamPopupContainer = document.querySelector('.team__popup__container');
       const teamMemberName = document.querySelector('.team__popup__header__text__name');
+      const teamMemberImage = document.querySelector('.team__popup__header__img img');
       const teamMemberSkills = document.querySelector('.team__popup__header__text__skills');
       const teamMemberSummary = document.querySelector('.team__popup__body__summary__paragraph');
       const teamMemberLinkedin = document.querySelector(
@@ -259,7 +227,130 @@
       const teamMemberWhatsApp = document.querySelector(
         '.team__popup__body__social__links__whatsapp'
       );
-      const memberContainer = document.querySelector('.member-container');
+      let memberContainer = document.querySelector('.member-container');
+      // Adding team Members to page
+      function memberCardGenerator(teamMember) {
+        let outputString = `
+        <div class="member-container__member-card">
+          <img
+            src="../resources/img/team/${teamMember.photoname}"
+            alt="${teamMember.name}"
+            class="member-container__member-card__img"
+          />
+          <div class="member-container__member-card__name-card">
+            <div class="member-container__member-card__name-card__name">${teamMember.name}</div>
+            <div class="member-container__member-card__name-card__post">${teamMember.post}</div>
+          </div>
+        </div>`;
+        return outputString;
+      }
+      memberContainer.innerHTML = '';
+      for (let teamMember of teamMembersArray) {
+        // console.log(teamMember);
+        memberContainer.innerHTML += `
+        <div class="member-container__member-card" data-memberid="${teamMembersArray.indexOf(
+          teamMember
+        )}">
+          <img
+            src="../resources/img/team/${teamMember.photoname}"
+            alt="${teamMember.name}"
+            class="member-container__member-card__img"
+          />
+          <div class="member-container__member-card__name-card">
+            <div class="member-container__member-card__name-card__name">${teamMember.name}</div>
+            <div class="member-container__member-card__name-card__post">${teamMember.post}</div>
+          </div>
+        </div>`;
+      }
+
+      // Popup Logic
+      // console.log(teamPopupContainer);
+
+      function changepopup(memberid) {
+        const member = teamMembersArray[memberid];
+        const photourl = `../resources/img/team/${member.photoname}`;
+        teamMemberName.innerHTML = `${member.name}`;
+        teamMemberImage.setAttribute('src', photourl);
+        teamMemberSkills.innerHTML =
+          '<div class="team__popup__header__text__skills__heading">Skills</div>';
+        for (let skill of member.skills) {
+          teamMemberSkills.innerHTML += `<div class="team__popup__header__text__skills__item">${skill}</div>`;
+        }
+        teamMemberSummary.innerHTML = '';
+        for (let paragraph of member.summary) {
+          teamMemberSummary.innerHTML += `<p>${paragraph}</p>`;
+        }
+        if (member.linkedinUrl) {
+          teamMemberLinkedin.style.display = 'flex';
+          teamMemberLinkedin.setAttribute('href', member.linkedinUrl);
+          teamMemberLinkedin.innerHTML = `${member.linkedin}<svg alt="linkedin-icon">
+                    <use xlink:href="/resources/img/vectors.svg#linkedin-icon"></use>
+                  </svg>`;
+        } else {
+          teamMemberLinkedin.style.display = 'none';
+        }
+        if (member.instagramUrl) {
+          teamMemberInstagram.style.display = 'flex';
+          teamMemberInstagram.setAttribute('href', member.instagramUrl);
+          teamMemberInstagram.innerHTML = `${member.instagram}<svg alt="instagram-icon">
+                    <use xlink:href="/resources/img/vectors.svg#instagram-icon"></use>
+                  </svg>`;
+        } else {
+          teamMemberInstagram.style.display = 'none';
+        }
+        if (member.facebookUrl) {
+          teamMemberFacebook.style.display = 'flex';
+          teamMemberFacebook.setAttribute('href', member.facebookUrl);
+          teamMemberFacebook.innerHTML = `${member.facebook}<svg alt="facebook-icon">
+                    <use xlink:href="/resources/img/vectors.svg#facebook-icon"></use>
+                  </svg>`;
+        } else {
+          teamMemberFacebook.style.display = 'none';
+        }
+        if (member.whatsappUrl) {
+          teamMemberWhatsApp.style.display = 'flex';
+          teamMemberWhatsApp.setAttribute('href', member.whatsappUrl);
+          teamMemberWhatsApp.setAttribute('target', '_blank');
+          teamMemberWhatsApp.innerHTML = `${member.whatsapp}<svg alt="whatsapp-icon">
+                    <use xlink:href="/resources/img/vectors.svg#whatsapp-icon"></use>
+                  </svg>`;
+        } else if (member.whatsapp) {
+          teamMemberWhatsApp.style.display = 'flex';
+          teamMemberWhatsApp.setAttribute('href', '#');
+          teamMemberWhatsApp.innerHTML = `${member.whatsapp}<svg alt="whatsapp-icon">
+                    <use xlink:href="/resources/img/vectors.svg#whatsapp-icon"></use>
+                  </svg>`;
+        } else {
+          teamMemberWhatsApp.style.display = 'none';
+        }
+        displaypopup();
+      }
+      function displaypopup() {
+        teamPopupContainer.style.display = 'flex';
+      }
+      function hidepopup() {
+        teamPopupContainer.style.display = 'none';
+      }
+      teamPopupContainer.style.display = 'none';
+      teamPopupContainer.addEventListener('click', (e) => {
+        if (
+          e.target.classList.contains('team__popup__container') ||
+          e.target.classList.contains('team__popup__close')
+        )
+          hidepopup();
+      });
+      memberContainer.addEventListener('click', (e) => {
+        if (
+          e.target.classList.contains('member-container__member-card__img') ||
+          e.target.classList.contains('member-container__member-card__name-card') ||
+          e.target.classList.contains('member-container__member-card__name-card__name') ||
+          e.target.classList.contains('member-container__member-card__name-card__post ')
+        ) {
+          const memberCard = e.target.closest('.member-container__member-card');
+          // console.log(memberCard.dataset.memberid);
+          changepopup(memberCard.dataset.memberid);
+        }
+      });
     </script>
   </body>
 </html>
