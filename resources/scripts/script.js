@@ -128,7 +128,7 @@ let teamMembersArray = [
     facebook: 'Uday Sharma',
     // whatsappUrl: 'https://wa.link/whump8',
     whatsapp: '+91 99183 55513',
-    photoname: 'arpit-shah.jpeg',
+    photoname: 'arpit-shah.jpg',
   },
   {
     name: `Guddu Kumar`,
@@ -151,7 +151,7 @@ let teamMembersArray = [
     facebook: 'guddu.7353',
     // whatsappUrl: 'https://wa.link/whump8',
     whatsapp: '+91 95727 24265',
-    photoname: 'guddu-kumar.jpeg',
+    photoname: 'guddu-kumar.jpg',
   },
   {
     name: `Vipin Kumar`,
