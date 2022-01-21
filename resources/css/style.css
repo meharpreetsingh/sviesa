@@ -538,6 +538,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 2rem;
+  grid-auto-rows: 30rem;
 }
 .member-container__member-card {
   position: relative;
@@ -625,9 +626,17 @@ a {
   position: relative;
   background-color: aliceblue;
   width: 80%;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: grid;
   grid-template-rows: 38rem 1fr;
+  max-height: 90%;
+}
+@media only screen and (max-width: 37.5em) {
+  .team__popup {
+    grid-template-rows: auto auto;
+    width: 90%;
+  }
 }
 .team__popup__close {
   position: absolute;
@@ -660,6 +669,17 @@ a {
   display: grid;
   grid-template-columns: 36.7rem 1fr;
 }
+@media only screen and (max-width: 56.25em) {
+  .team__popup__header {
+    grid-template-columns: 30rem 1fr;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .team__popup__header {
+    grid-template-columns: unset;
+    grid-template-rows: minmax(30rem, 50rem) auto;
+  }
+}
 .team__popup__header__img {
   overflow: hidden;
 }
@@ -674,13 +694,31 @@ a {
   padding: 8rem;
   color: #ffffff;
 }
+@media only screen and (max-width: 75em) {
+  .team__popup__header__text {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .team__popup__header__text__name {
   font-size: 4.8rem;
   font-weight: 500;
 }
+@media only screen and (max-width: 56.25em) {
+  .team__popup__header__text__name {
+    font-size: 3.4rem;
+  }
+}
 .team__popup__header__text__skills__heading {
   font-weight: 600;
   font-size: 2.2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .team__popup__header__text__skills__heading {
+    font-size: 1.8rem;
+  }
 }
 .team__popup__header__text__skills__item {
   font-size: 1.6rem;
@@ -689,12 +727,31 @@ a {
 .team__popup__body {
   padding: 3rem 10rem 6rem 10rem;
   display: grid;
-  grid-template-columns: 69.5rem 1fr;
+  grid-template-columns: 60rem 1fr;
+}
+@media only screen and (max-width: 75em) {
+  .team__popup__body {
+    padding: 3rem 5rem 3rem 5rem;
+    grid-template-columns: 50rem 1fr;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .team__popup__body {
+    padding: 3rem 5rem 3rem 5rem;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
+    grid-gap: 2rem;
+  }
 }
 .team__popup__body__summary__heading {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .team__popup__body__summary__heading {
+    font-size: 1.8rem;
+  }
 }
 .team__popup__body__summary__paragraph p:not(:last-of-type) {
   margin-bottom: 0.5rem;
@@ -702,10 +759,20 @@ a {
 .team__popup__body__social {
   text-align: right;
 }
+@media only screen and (max-width: 56.25em) {
+  .team__popup__body__social {
+    text-align: left;
+  }
+}
 .team__popup__body__social__heading {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .team__popup__body__social__heading {
+    font-size: 1.8rem;
+  }
 }
 .team__popup__body__social__links {
   font-size: 1.6rem;
@@ -714,11 +781,24 @@ a {
   flex-direction: column;
   grid-gap: 0.5rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .team__popup__body__social__links {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 1rem;
+  }
+}
 .team__popup__body__social__links svg {
   height: 2.7rem;
   width: 2.7rem;
   fill: currentColor;
   object-fit: cover;
+}
+@media only screen and (max-width: 56.25em) {
+  .team__popup__body__social__links svg {
+    order: -1;
+  }
 }
 .team__popup__body__social__links > * {
   display: flex;
@@ -730,6 +810,11 @@ a {
 .team__popup__body__social__links > *:hover {
   color: #ee0000;
   fill: #ee0000;
+}
+@media only screen and (max-width: 56.25em) {
+  .team__popup__body__social__links > * {
+    justify-content: left;
+  }
 }
 section {
   padding: 15rem 10rem;

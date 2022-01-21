@@ -3,9 +3,15 @@
   background-color: aliceblue;
   width: 80%;
   // height: 90%;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: grid;
   grid-template-rows: 38rem 1fr;
+  max-height: 90%;
+  @include respond(phone) {
+    grid-template-rows: auto auto;
+    width: 90%;
+  }
   &__close {
     position: absolute;
     z-index: 100;
@@ -37,6 +43,13 @@
     background-color: $color-secondary-accent;
     display: grid;
     grid-template-columns: 36.7rem 1fr;
+    @include respond(tab-port) {
+      grid-template-columns: 30rem 1fr;
+    }
+    @include respond(phone) {
+      grid-template-columns: unset;
+      grid-template-rows: minmax(30rem, 50rem) auto;
+    }
     &__img {
       overflow: hidden;
       img {
@@ -50,14 +63,27 @@
     &__text {
       padding: 8rem;
       color: $color-white;
+
+      @include respond(tab-land) {
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
       &__name {
         font-size: 4.8rem;
         font-weight: 500;
+        @include respond(tab-port) {
+          font-size: 3.4rem;
+        }
       }
       &__skills {
         &__heading {
           font-weight: 600;
           font-size: 2.2rem;
+          @include respond(tab-port) {
+            font-size: 1.8rem;
+          }
         }
         &__item {
           font-size: 1.6rem;
@@ -69,12 +95,25 @@
   &__body {
     padding: 3rem 10rem 6rem 10rem;
     display: grid;
-    grid-template-columns: 69.5rem 1fr;
+    grid-template-columns: 60rem 1fr;
+    @include respond(tab-land) {
+      padding: 3rem 5rem 3rem 5rem;
+      grid-template-columns: 50rem 1fr;
+    }
+    @include respond(tab-port) {
+      padding: 3rem 5rem 3rem 5rem;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr auto;
+      grid-gap: 2rem;
+    }
     &__summary {
       &__heading {
         font-size: 2rem;
         font-weight: 500;
         margin-bottom: 1rem;
+        @include respond(tab-port) {
+          font-size: 1.8rem;
+        }
       }
       &__paragraph {
         p:not(:last-of-type) {
@@ -84,22 +123,37 @@
     }
     &__social {
       text-align: right;
+      @include respond(tab-port) {
+        text-align: left;
+      }
       &__heading {
         font-size: 2rem;
         font-weight: 500;
         margin-bottom: 1rem;
+        @include respond(tab-port) {
+          font-size: 1.8rem;
+        }
       }
       &__links {
         font-size: 1.6rem;
         font-weight: 300;
         display: flex;
         flex-direction: column;
+        @include respond(tab-port) {
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          grid-gap: 1rem;
+        }
         grid-gap: 0.5rem;
         svg {
           height: 2.7rem;
           width: 2.7rem;
           fill: currentColor;
           object-fit: cover;
+          @include respond(tab-port) {
+            order: -1;
+          }
         }
         & > * {
           display: flex;
@@ -110,6 +164,9 @@
           &:hover {
             color: $color-secondary-accent;
             fill: $color-secondary-accent;
+          }
+          @include respond(tab-port) {
+            justify-content: left;
           }
         }
         &__linkedin {
